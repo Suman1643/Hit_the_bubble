@@ -1,29 +1,34 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'gilroy';
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
 }
-.main{
-    height:100%;
+
+.main {
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgb(233, 144, 174);
 }
-.panel{
+
+.panel {
     height: 90%;
     width: 80%;
     border-radius: 1.8vw;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
 }
-.ptop{
+
+.ptop {
     padding: 0% 30%;
     width: 100%;
     height: 13vh;
@@ -33,13 +38,15 @@ html,body{
     color: #fff;
     background-color: rgb(122, 53, 85);
 }
-.elem{
+
+.elem {
     display: flex;
     align-items: center;
     gap: 1vw;
     /* background-color: rgb(75, 75, 122); */
 }
-.box{
+
+.box {
     color: black;
     font-weight: 600;
     font-size: 1.3vw;
@@ -47,7 +54,8 @@ html,body{
     background-color: white;
     border-radius: 0.3vw;
 }
-.pbotom{
+
+.pbotom {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +66,8 @@ html,body{
     padding: 1vw;
     background-color: rgb(255, 255, 255);
 }
-.bubble{
+
+.bubble {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,9 +76,63 @@ html,body{
     height: 3vw;
     border-radius: 50%;
     color: #000000;
-    background-color: rgb(220, 130, 214);
+    background-color: rgb(160, 116, 157);
+    overflow: hidden;
 }
-.bubble:hover{
+
+.bubble:hover {
     background-color: rgb(147, 44, 121);
     cursor: pointer;
+}
+
+.image {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+@media (max-width:600px) {
+    .ptop {
+        padding: 0% 3%;
+        width: 100%;
+        height: 9vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        background-color: rgb(122, 53, 85);
+    }
+    
+    .elem {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        /* background-color: rgb(75, 75, 122); */
+    }
+    
+    .box {
+        height: 7vw;
+        width: 9vw;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-weight: 600;
+        font-size: 1.3vw;
+        padding: 0.5vw 1vw;
+        background-color: white;
+        border-radius: 0.3vw;
+    }
+    .image{
+        height: 6vw;
+        width: 6vw;
+    }
+    .bubble{
+        height: 10.5vw;
+        width: 10.5vw;
+    }
+    #timevar{
+        font-size: 18px;
+    }
+    #scoreval{
+        font-size: 16px;
+    }
 }
