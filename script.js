@@ -33,7 +33,7 @@ const images = [
     }
     document.querySelector(".pbotom").innerHTML = clutter;
   }
-  
+
   var timer = 60;
   function runTimer() {
     var timerint = setInterval(function () {
@@ -46,15 +46,8 @@ const images = [
       }
     }, 1000);
   }
-  
+
   document.querySelector(".pbotom").addEventListener("click", function (dets) {
-    // var clikednumb = Number(dets.target.textContent);
-    // if (clikednumb === hitrn) {
-    //   increaseScore();
-    //   makebubble();
-    //   getNewHit();
-    // }
-  
     var clickedImgSrc = dets.target.src;
     var targetImgSrc = document.querySelector("#hitimg").src;
   
@@ -64,7 +57,12 @@ const images = [
       getNewHit();
     }
   });
-  
   runTimer();
   makebubble();
   getNewHit();
+  const start_again = document.querySelector("#restart");
+    start_again.addEventListener("click" , function(){
+      getNewHit();
+      makebubble();
+    });
+  
