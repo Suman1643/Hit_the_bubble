@@ -12,6 +12,7 @@ const images = [
   ];
   
   var score = 0;
+  var timer = 60;
   function increaseScore() {
     score += 10;
     document.querySelector("#scoreval").textContent = score;
@@ -33,8 +34,7 @@ const images = [
     }
     document.querySelector(".pbotom").innerHTML = clutter;
   }
-  
-  var timer = 60;
+
   function runTimer() {
     var timerint = setInterval(function () {
       if (timer > 0) {
@@ -42,19 +42,13 @@ const images = [
         document.querySelector("#timevar").textContent = timer;
       } else {
         clearInterval(timerint);
+        document.querySelector("#restart").classList.remove("hide");
         document.querySelector(".pbotom").innerHTML = `<h1>Game Over</h1>`;
       }
     }, 1000);
   }
-  
+
   document.querySelector(".pbotom").addEventListener("click", function (dets) {
-    // var clikednumb = Number(dets.target.textContent);
-    // if (clikednumb === hitrn) {
-    //   increaseScore();
-    //   makebubble();
-    //   getNewHit();
-    // }
-  
     var clickedImgSrc = dets.target.src;
     var targetImgSrc = document.querySelector("#hitimg").src;
   
@@ -64,7 +58,17 @@ const images = [
       getNewHit();
     }
   });
-  
   runTimer();
   makebubble();
   getNewHit();
+  
+  document.querySelector("#restart").addEventListener("click", function () {
+    document.querySelector("#restart").classList.add("hide");
+    score = 0;
+    timer = 60;
+    document.querySelector("#scoreval").textContent = score;
+    document.querySelector("#timevar").textContent = timer;
+    runTimer();
+    makebubble();
+    getNewHit();
+  });
