@@ -94,9 +94,16 @@ body {
 #restart{
     height: 3vw;
     width: 6vw;
+    /* display: none; */
     font-weight: 600;
     background-color: rgb(237, 216, 219);
     border-radius: 15px;
+}
+#restart:hover{
+    cursor: pointer;
+}
+.hide{
+    display: none;
 }
 
 @media (max-width:600px) {
@@ -143,5 +150,13 @@ body {
     }
     #scoreval{
         font-size: 16px;
+    }
+
+    #restart{
+        height: 6vw;
+        width: 15vw;
+        font-weight: 600;
+        background-color: rgb(237, 216, 219);
+        border-radius: 15px;
     }
 }
